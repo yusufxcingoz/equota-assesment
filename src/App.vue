@@ -1,19 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <top-bar></top-bar>
+    <div id="sub">
+      <portfolioBarVue />
+      
+      <myChartVue />
+    </div>
+    
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import topBar from "./components/top-bar.vue";
+import portfolioBarVue from "./components/portfolio-bar.vue";
+import myChartVue from "./components/my-chart.vue";
+
+
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  name: "App",
+  components: { "top-bar": topBar, portfolioBarVue, myChartVue,  },
+
+
+  /*
+ 
+
+  */
+ 
 }
+
 </script>
 
 <style>
@@ -23,6 +39,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  
+}
+
+#sub {
+  display: flex;
 }
 </style>
