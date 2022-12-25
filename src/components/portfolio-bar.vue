@@ -2,8 +2,7 @@
   <div class="portfolio-main">
     <h1>List Of Portfolio</h1>
     <div v-for="(elem, index) in chartData" :key="`stock-${index}`">
-
-      <portfolio-el :title="elem[0]"  :price="elem[1]" :data="chartData" >
+      <portfolio-el :title="elem[0]" :price="elem[1]" :data="chartData">
       </portfolio-el>
     </div>
   </div>
@@ -19,17 +18,11 @@ export default {
     "portfolio-el": portfolioElementVue,
   },
 
-  computed:{
-    ...mapState([
-      "listData", "chartData"
-    ]),
-
-    },
-    methods:{
-    }
-    
-}
-
+  computed: {
+    ...mapState(["listData", "chartData"]),
+  },
+  methods: {},
+};
 </script>
   
   <style  scoped>

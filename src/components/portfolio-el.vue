@@ -1,52 +1,33 @@
 <template>
   <div class="main-port">
-
     <div class="main-port-elem">
-      
-      <h2>{{title}}</h2>
+      <h2>{{ title }}</h2>
       <p>Amount</p>
-      <h2>{{price}}</h2>
+      <h2>{{ price }}</h2>
       <button class="port-btn" @click="updateVault(data[0])">kaldır</button>
     </div>
   </div>
 </template>
 
 <script>
-
-import { mapState, mapActions } from 'vuex';
-
+import { mapState, mapActions } from "vuex";
 
 export default {
-  props:{
+  props: {
     title: String,
     price: Number,
     data: [],
-    
-
-
   },
-  computed:{
-        ...mapState([
-            "chartData"
-        ])
+  computed: {
+    ...mapState(["chartData"]),
+  },
+  methods: {
+    ...mapActions(["updatePortfolio", "removeFromPortfolio"]),
+    updateVault(index) {
+      this.removeFromPortfolio(index);
     },
-  methods:{
-    
-    
-    ...mapActions([
-        "updatePortfolio", "removeFromPortfolio"
-    ]),
-    updateVault(index){
-       this.removeFromPortfolio(index)
-      
-    }, 
-
-    
-
-    
-
-  }
-}
+  },
+};
 </script>
   
   
@@ -66,12 +47,12 @@ div.main-port-elem {
   border-radius: 15px;
 }
 
-.port-btn{
+.port-btn {
   border-radius: 4px;
-    border: 0;
-    background-color: #be86bf;
-  
-  width:8vh;
+  border: 0;
+  background-color: #be86bf;
+
+  width: 8vh;
   height: 4vh;
 }
 </style>

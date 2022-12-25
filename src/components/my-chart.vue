@@ -1,9 +1,7 @@
 <template>
   <div class="app">
-
     <div class="chart-main">
       <h1 class="header">Portfolio</h1>
-      
       <pieChartVue />
     </div>
   </div>
@@ -18,19 +16,15 @@ export default {
 };
 </script>
   <style>
-  .app{
-    flex-grow: 1;
-  }
+.app {
+  flex-grow: 1;
+}
 div.chart-main {
-  
   align-items: center;
   margin: 5vh;
   height: 70vh;
-
-  
 }
-.header{
-  margin-bottom:10vh;
+.header {
+  margin-bottom: 10vh;
 }
-
 </style>

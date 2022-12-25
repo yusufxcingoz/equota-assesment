@@ -7,10 +7,7 @@ const state = {
     
     chartData : [],
     timesOfCoin: 0,
-
     isEmpty: true
-
-
 
 }
 
@@ -26,7 +23,7 @@ const mutations = {
                 state.timesOfCoin++
                 exists[1] = state.timesOfCoin*coin[1]
 
-                console.log(state.chartData)
+                
                 state.timesOfCoin === 0 
                 
    
@@ -44,7 +41,7 @@ const mutations = {
         refreshData(state, coin){
             state.chartData.push(coin)
             state.chartData.pop()
-            console.log("deneme")
+           
         }
 
     

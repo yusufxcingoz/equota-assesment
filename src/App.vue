@@ -3,11 +3,8 @@
     <top-bar></top-bar>
     <div id="sub">
       <portfolioBarVue />
-      
       <myChartVue />
     </div>
-    
-    
   </div>
 </template>
 
@@ -16,20 +13,10 @@ import topBar from "./components/top-bar.vue";
 import portfolioBarVue from "./components/portfolio-bar.vue";
 import myChartVue from "./components/my-chart.vue";
 
-
-
 export default {
   name: "App",
-  components: { "top-bar": topBar, portfolioBarVue, myChartVue,  },
-
-
-  /*
- 
-
-  */
- 
-}
-
+  components: { "top-bar": topBar, portfolioBarVue, myChartVue },
+};
 </script>
 
 <style>
@@ -39,7 +26,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  
 }
 
 #sub {

@@ -3,12 +3,8 @@
     
     <div class="button-div">
       <modalPopupVue ref="modal"  />
-      
-      
-      
       <button class="add-btn" @click="openModal()">Add/Stock</button>
       <button class="add-btn"  @click="refresh([])" >Refresh</button>
-
     </div>
   </div>
 </template>
@@ -43,11 +39,7 @@ export default {
        this.refreshData(index)
        
     }, 
-
-    
-  },
-
-  
+    },  
 };
 </script>
 
