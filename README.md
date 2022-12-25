@@ -1,4 +1,8 @@
 -# vuex-vue2
+##Notlar
+```
+Stock eklemek için açtığımız modalda, coinlerimizi eklemek için birden fazla kez "Add" tuşuna bastığımızda coinlerimizi portfolyomuzda görebilmek için "Refresh" butonuna tıklamamız gerekmektedir. 
+
 
 ## Project setup
 ```
