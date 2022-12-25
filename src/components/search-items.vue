@@ -12,8 +12,9 @@
             </h1>
             <p>
                 Price : 
-                {{ stock.lastPrice }}
+                {{ stock.lastPrice.slice(0, 6) }}
             </p>
+           
             <button class="add-btn" @click="updateVault(index)">Add</button>
             <button class="add-btn"  @click="refresh([])" >Refresh</button>
         </div>
@@ -31,7 +32,7 @@ export default{
     props: ['stocks'],
     computed:{
         ...mapState([
-            "chartData"
+            "chartData", "timesOfCoin"
         ])
     },
     

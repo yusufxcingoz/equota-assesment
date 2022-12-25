@@ -6,7 +6,7 @@ Vue.use(Vuex)
 const state = {
     
     chartData : [],
-    timesOfCoin: 1,
+    timesOfCoin: 0,
 
     isEmpty: true
 
@@ -27,12 +27,13 @@ const mutations = {
                 exists[1] = state.timesOfCoin*coin[1]
 
                 console.log(state.chartData)
+                state.timesOfCoin === 0 
                 
    
             } else{
             
             state.chartData.push(coin)
-            state.timesOfCoin == 0 
+            state.timesOfCoin === 0 
         }
         
     },
@@ -43,6 +44,7 @@ const mutations = {
         refreshData(state, coin){
             state.chartData.push(coin)
             state.chartData.pop()
+            console.log("deneme")
         }
 
     

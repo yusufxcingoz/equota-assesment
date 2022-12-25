@@ -4,6 +4,7 @@
     <div class="main-port-elem">
       
       <h2>{{title}}</h2>
+      <p>Amount</p>
       <h2>{{price}}</h2>
       <button class="port-btn" @click="updateVault(data[0])">kaldır</button>
     </div>
@@ -37,7 +38,7 @@ export default {
     ]),
     updateVault(index){
        this.removeFromPortfolio(index)
-       console.log(index)
+      
     }, 
 
     
@@ -66,6 +67,10 @@ div.main-port-elem {
 }
 
 .port-btn{
+  border-radius: 4px;
+    border: 0;
+    background-color: #be86bf;
+  
   width:8vh;
   height: 4vh;
 }

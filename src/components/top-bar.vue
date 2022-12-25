@@ -2,7 +2,7 @@
   <div class="main">
     
     <div class="button-div">
-      <modalPopupVue ref="modal" :visible="show" />
+      <modalPopupVue ref="modal"  />
       
       
       

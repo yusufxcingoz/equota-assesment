@@ -13,7 +13,7 @@
         <button class="src-item">Search</button>
 
         
-        <p v-if="isLoading"> Loading</p>
+        
         <searchItemsVue v-if="query"  :stocks="filteredStocks" />
       </div>
     </div>
